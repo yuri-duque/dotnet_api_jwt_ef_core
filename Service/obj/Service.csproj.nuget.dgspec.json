@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos\\net_core_jwt_ef_core\\Service\\Service.csproj": {}
+    "D:\\Projetos\\api_net_core_jwt_ef_core\\Service\\Service.csproj": {}
   },
   "projects": {
-    "D:\\Projetos\\net_core_jwt_ef_core\\Service\\Service.csproj": {
+    "D:\\Projetos\\api_net_core_jwt_ef_core\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\net_core_jwt_ef_core\\Service\\Service.csproj",
+        "projectUniqueName": "D:\\Projetos\\api_net_core_jwt_ef_core\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "D:\\Projetos\\net_core_jwt_ef_core\\Service\\Service.csproj",
+        "projectPath": "D:\\Projetos\\api_net_core_jwt_ef_core\\Service\\Service.csproj",
         "packagesPath": "C:\\Users\\YuriDuque\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\net_core_jwt_ef_core\\Service\\obj\\",
+        "outputPath": "D:\\Projetos\\api_net_core_jwt_ef_core\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\YuriDuque\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -37,6 +37,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.6.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

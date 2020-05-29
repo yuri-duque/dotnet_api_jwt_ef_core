@@ -1,9 +1,0 @@
-D:\Projetos\net_core_jwt_ef_core\Models\bin\Debug\netcoreapp3.1\Models.deps.json
-D:\Projetos\net_core_jwt_ef_core\Models\bin\Debug\netcoreapp3.1\Models.dll
-D:\Projetos\net_core_jwt_ef_core\Models\bin\Debug\netcoreapp3.1\Models.pdb
-D:\Projetos\net_core_jwt_ef_core\Models\obj\Debug\netcoreapp3.1\Models.csprojAssemblyReference.cache
-D:\Projetos\net_core_jwt_ef_core\Models\obj\Debug\netcoreapp3.1\Models.AssemblyInfoInputs.cache
-D:\Projetos\net_core_jwt_ef_core\Models\obj\Debug\netcoreapp3.1\Models.AssemblyInfo.cs
-D:\Projetos\net_core_jwt_ef_core\Models\obj\Debug\netcoreapp3.1\Models.dll
-D:\Projetos\net_core_jwt_ef_core\Models\obj\Debug\netcoreapp3.1\Models.pdb
-D:\Projetos\net_core_jwt_ef_core\Models\obj\Debug\netcoreapp3.1\Models.csproj.CoreCompileInputs.cache

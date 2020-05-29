@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos\\net_core_jwt_ef_core\\Repository\\Repository.csproj": {}
+    "D:\\Projetos\\api_net_core_jwt_ef_core\\Repository\\Repository.csproj": {}
   },
   "projects": {
-    "D:\\Projetos\\net_core_jwt_ef_core\\Models\\Models.csproj": {
+    "D:\\Projetos\\api_net_core_jwt_ef_core\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\net_core_jwt_ef_core\\Models\\Models.csproj",
-        "projectName": "Models",
-        "projectPath": "D:\\Projetos\\net_core_jwt_ef_core\\Models\\Models.csproj",
+        "projectUniqueName": "D:\\Projetos\\api_net_core_jwt_ef_core\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "D:\\Projetos\\api_net_core_jwt_ef_core\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\YuriDuque\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\net_core_jwt_ef_core\\Models\\obj\\",
+        "outputPath": "D:\\Projetos\\api_net_core_jwt_ef_core\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\YuriDuque\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -41,6 +41,10 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.4, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.6.0, )"
             }
           },
           "imports": [
@@ -62,14 +66,14 @@
         }
       }
     },
-    "D:\\Projetos\\net_core_jwt_ef_core\\Repository\\Repository.csproj": {
+    "D:\\Projetos\\api_net_core_jwt_ef_core\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\net_core_jwt_ef_core\\Repository\\Repository.csproj",
+        "projectUniqueName": "D:\\Projetos\\api_net_core_jwt_ef_core\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "D:\\Projetos\\net_core_jwt_ef_core\\Repository\\Repository.csproj",
+        "projectPath": "D:\\Projetos\\api_net_core_jwt_ef_core\\Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\YuriDuque\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\net_core_jwt_ef_core\\Repository\\obj\\",
+        "outputPath": "D:\\Projetos\\api_net_core_jwt_ef_core\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\YuriDuque\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -85,8 +89,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Projetos\\net_core_jwt_ef_core\\Models\\Models.csproj": {
-                "projectPath": "D:\\Projetos\\net_core_jwt_ef_core\\Models\\Models.csproj"
+              "D:\\Projetos\\api_net_core_jwt_ef_core\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Projetos\\api_net_core_jwt_ef_core\\Domain\\Domain.csproj"
               }
             }
           }
@@ -105,12 +109,6 @@
               "version": "[3.1.4, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
-              "target": "Package",
-              "version": "[3.1.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.4, )"
             },

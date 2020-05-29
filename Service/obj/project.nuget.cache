@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "UeBo+X4iFB1vs1OTc3rR6/smQjnce/wCH6QYf5Buo1SNSn85AFBak7pzO6TDDa0ReDQQuANkLKt4d4aj9dPzIQ==",
+  "dgSpecHash": "fhNP4nAGk8Zdxzw9auoYE8LIBTHWTUXBDGxYVnNaLva/2KFXR2U8HNOzOx+V+PjoIsrmgEuOFLR9Kr3UDxgKow==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\net_core_jwt_ef_core\\Service\\Service.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Projetos\\api_net_core_jwt_ef_core\\Service\\Service.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\YuriDuque\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\YuriDuque\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.6.0\\microsoft.identitymodel.jsonwebtokens.6.6.0.nupkg.sha512",
+    "C:\\Users\\YuriDuque\\.nuget\\packages\\microsoft.identitymodel.logging\\6.6.0\\microsoft.identitymodel.logging.6.6.0.nupkg.sha512",
+    "C:\\Users\\YuriDuque\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.6.0\\microsoft.identitymodel.tokens.6.6.0.nupkg.sha512",
+    "C:\\Users\\YuriDuque\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.6.0\\system.identitymodel.tokens.jwt.6.6.0.nupkg.sha512",
+    "C:\\Users\\YuriDuque\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }

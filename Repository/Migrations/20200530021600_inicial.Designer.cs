@@ -8,7 +8,7 @@ using Repository.Context;
 namespace Repository.Migrations
 {
     [DbContext(typeof(BaseContext))]
-    [Migration("20200530011423_inicial")]
+    [Migration("20200530021600_inicial")]
     partial class inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,14 +24,14 @@ namespace Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    b.Property<string>("Nome")
+                    b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("Role")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<string>("Senha")
+                    b.Property<string>("Username")
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 

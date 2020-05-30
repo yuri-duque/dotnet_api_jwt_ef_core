@@ -1,3 +1,5 @@
+using AutoMapper;
+using Domain.AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -28,6 +30,8 @@ namespace WebApi
             services.AddControllers();
 
             services.AddDbContext<BaseContext>(options => options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddAutoMapper(typeof(AutoMapping));
 
             #region Repository
 

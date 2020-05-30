@@ -1,4 +1,6 @@
-﻿using Domain.Models;
+﻿using AutoMapper;
+using Domain.DTO;
+using Domain.Models;
 using Repository.ModelsRepository;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +10,12 @@ namespace Service.Models
     public class UsuarioService
     {
         private readonly UsuarioRepository _usuarioRepository;
+        private readonly IMapper _mapper;
 
-        public UsuarioService(UsuarioRepository usuarioRepository)
+        public UsuarioService(UsuarioRepository usuarioRepository, IMapper mapper)
         {
             _usuarioRepository = usuarioRepository;
+            _mapper = mapper;
         }
 
         public IList<Usuario> GetAll()
@@ -24,9 +28,9 @@ namespace Service.Models
             return _usuarioRepository.Find(id);
         }
 
-        public Usuario Login(Usuario usuario)
+        public Usuario Login(UsuarioLoginDTO usuarioDTO)
         {
-            var user = GetAll().FirstOrDefault(x => x.Nome.Equals(usuario.Nome) && x.Senha.Equals(usuario.Senha));
+            var user = GetAll().FirstOrDefault(x => x.Username.ToLower().Equals(usuarioDTO.Username.ToLower()) && x.Password.Equals(usuarioDTO.Password));
 
             return user;
         }
@@ -41,9 +45,9 @@ namespace Service.Models
             _usuarioRepository.Save(usuario);
         }
 
-        public void Delete(Usuario usuario)
+        public void Delete(long Id)
         {
-            _usuarioRepository.Save(usuario);
+            _usuarioRepository.Delete(x => x.Id == Id);
         }
     }
 }

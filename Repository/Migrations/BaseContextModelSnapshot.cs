@@ -22,14 +22,14 @@ namespace Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    b.Property<string>("Nome")
+                    b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("Role")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<string>("Senha")
+                    b.Property<string>("Username")
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 

@@ -1,4 +1,5 @@
-﻿using Domain.Models;
+﻿using Domain.DTO;
+using Domain.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service;
@@ -30,20 +31,22 @@ namespace WebApi.Controllers
                 return Ok(usuario);
             }catch(Exception ex)
             {
-                return BadRequest(ex);
+                return BadRequest(ex.Message);
             }
         }
 
         [HttpPost("login")]
         [AllowAnonymous]
-        public ActionResult Login(Usuario user)
+        public ActionResult Login(UsuarioLoginDTO userDTO)
         {
             try
             {
+                var teste = ModelState.Values.SelectMany(x => x.Errors);
+
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState.Values.SelectMany(x => x.Errors));
 
-                var usuario = _usuarioService.Login(user);
+                var usuario = _usuarioService.Login(userDTO);
 
                 if (usuario == null)
                     return NotFound("Usuário não encontrado!");

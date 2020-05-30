@@ -4,6 +4,7 @@ API padrão para criação de projetos que necessitam de um login basico e tende
 
 # Prerequesitos
   MySql
+  
   Docker
 
 # Inicializando projeto
@@ -30,21 +31,25 @@ Backend (WebApi):
 
 AutoMapper DependencyInjection v7.0.0: 
   > utilizado para fazer a transformação de objetos que chegam da requisição para os objetos utilizados dentro do sistema.
+  
   > https://www.codementor.io/@zedotech/how-to-using-automapper-on-asp-net-core-3-0-via-dependencyinjection-zq497lzsq
 
 
 JWT v3.1.4:
   > utilizado para gerar tokens de acesso a api
+  
   > https://balta.io/blog/aspnetcore-3-autenticacao-autorizacao-bearer-jwt
   
 
 Entity Framework Core v3.1.4:
   > utilizado para fazer a comunicação com o banco de dados
+  
   > http://www.macoratti.net/17/05/efcore_mysql1.htm
 
 
 Entity Framework Core MySql:
   > utilizado para possibilitar a integração do EF Core com o banco MySql
+  
   > http://www.macoratti.net/17/05/efcore_mysql1.htm
   
 
@@ -54,4 +59,5 @@ DependencyInjection:
 
 Postman:
   > utilizado para consumir os endpoints
+  
   > utilizar a collection "api_net_core_jwt_ef_core.postman_collection" na raiz do repositorio para consumir os endpoints

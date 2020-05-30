@@ -7,6 +7,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Repository.Context;
+using Repository.ModelsRepository;
+using Service.Models;
 using System.Text;
 
 namespace WebApi
@@ -27,6 +29,20 @@ namespace WebApi
 
             services.AddDbContext<BaseContext>(options => options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
 
+            #region Repository
+
+            services.AddScoped<UsuarioRepository>();
+
+            #endregion
+
+            #region Service
+
+            services.AddScoped<UsuarioService>();
+
+            #endregion
+
+            #region JWT
+
             var key = Encoding.ASCII.GetBytes("fedaf7d8863b48e197b9287d492b708e");
             services.AddAuthentication(x =>
             {
@@ -45,6 +61,8 @@ namespace WebApi
                     ValidateAudience = false
                 };
             });
+
+            #endregion
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

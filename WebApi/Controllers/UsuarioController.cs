@@ -1,54 +1,80 @@
 ﻿using Domain.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Repository.ModelsRepository;
 using Service;
+using Service.Models;
 using System;
-using System.Threading.Tasks;
+using System.Linq;
 
 namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class UsuarioController : ControllerBase
     {
-        [HttpPost]
-        [Route("login")]
-        [AllowAnonymous]
-        public async Task<ActionResult<dynamic>> Authenticate([FromBody]Usuario usuario)
+        private readonly UsuarioService _usuarioService;
+
+        public UsuarioController(UsuarioService usuarioService)
         {
-            var user = UserRepository.Get(usuario.Nome, usuario.Senha);
-
-            if (user == null)
-                return NotFound(new { message = "Usuário ou senha inválidos" });
-
-            var token = TokenService.GenerateToken(user);
-            user.Senha = "";
-            return new
-            {
-                user = user,
-                token = token
-            };
+            _usuarioService = usuarioService;
         }
 
-        [HttpGet]
-        [Route("anonymous")]
+        [HttpGet]        
+        public ActionResult GetAll()
+        {
+            try
+            {
+                var usuario = _usuarioService.GetAll();
+
+                return Ok(usuario);
+            }catch(Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
+
+        [HttpPost("login")]
         [AllowAnonymous]
-        public string Anonymous() => "Anônimo";
+        public ActionResult Login(Usuario user)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState.Values.SelectMany(x => x.Errors));
 
-        [HttpGet]
-        [Route("authenticated")]
-        [Authorize]
-        public string Authenticated() => String.Format("Autenticado - {0}", User.Identity.Name);
+                var usuario = _usuarioService.Login(user);
 
-        [HttpGet]
-        [Route("employee")]
-        [Authorize(Roles = "employee,manager")]
-        public string Employee() => "Funcionário";
+                if (usuario == null)
+                    return NotFound("Usuário não encontrado!");
 
-        [HttpGet]
-        [Route("manager")]
-        [Authorize(Roles = "manager")]
-        public string Manager() => "Gerente";
+                var token = TokenService.GenerateToken(usuario);
+
+                return Ok(new { usuario, token });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        public ActionResult Save(Usuario user)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState.Values.SelectMany(x => x.Errors));
+
+                _usuarioService.Save(user);
+
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

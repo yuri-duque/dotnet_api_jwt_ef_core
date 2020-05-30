@@ -9,4 +9,7 @@ D:\Projetos\api_net_core_jwt_ef_core\Repository\obj\Debug\netcoreapp3.1\Reposito
 D:\Projetos\api_net_core_jwt_ef_core\Repository\obj\Debug\netcoreapp3.1\Repository.pdb
 D:\Projetos\api_net_core_jwt_ef_core\Repository\bin\Debug\netcoreapp3.1\Domain.dll
 D:\Projetos\api_net_core_jwt_ef_core\Repository\bin\Debug\netcoreapp3.1\Domain.pdb
+D:\Projetos\api_net_core_jwt_ef_core\Repository\bin\Debug\netcoreapp3.1\Repository.runtimeconfig.json
+D:\Projetos\api_net_core_jwt_ef_core\Repository\bin\Debug\netcoreapp3.1\Repository.runtimeconfig.dev.json
+D:\Projetos\api_net_core_jwt_ef_core\Repository\obj\Debug\netcoreapp3.1\Repository.genruntimeconfig.cache
 D:\Projetos\api_net_core_jwt_ef_core\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CoreCompileInputs.cache

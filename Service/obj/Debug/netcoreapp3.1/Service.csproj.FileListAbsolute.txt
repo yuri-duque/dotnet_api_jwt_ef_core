@@ -10,3 +10,5 @@ D:\Projetos\api_net_core_jwt_ef_core\Service\obj\Debug\netcoreapp3.1\Service.dll
 D:\Projetos\api_net_core_jwt_ef_core\Service\obj\Debug\netcoreapp3.1\Service.pdb
 D:\Projetos\api_net_core_jwt_ef_core\Service\bin\Debug\netcoreapp3.1\Domain.dll
 D:\Projetos\api_net_core_jwt_ef_core\Service\bin\Debug\netcoreapp3.1\Domain.pdb
+D:\Projetos\api_net_core_jwt_ef_core\Service\bin\Debug\netcoreapp3.1\Repository.dll
+D:\Projetos\api_net_core_jwt_ef_core\Service\bin\Debug\netcoreapp3.1\Repository.pdb

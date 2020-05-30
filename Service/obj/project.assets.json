@@ -68,6 +68,18 @@
           "lib/netstandard2.0/_._": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.Relational/3.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll": {}
+        }
+      },
       "Microsoft.Extensions.Caching.Abstractions/3.1.4": {
         "type": "package",
         "dependencies": {
@@ -233,6 +245,51 @@
           "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll": {}
         }
       },
+      "MySqlConnector/0.61.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/MySqlConnector.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/MySqlConnector.dll": {}
+        }
+      },
+      "Newtonsoft.Json/11.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Pomelo.EntityFrameworkCore.MySql/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "3.1.0",
+          "MySqlConnector": "0.61.0",
+          "Pomelo.JsonObject": "2.2.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Pomelo.EntityFrameworkCore.MySql.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Pomelo.EntityFrameworkCore.MySql.dll": {}
+        }
+      },
+      "Pomelo.JsonObject/2.2.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Pomelo.JsonObject.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Pomelo.JsonObject.dll": {}
+        }
+      },
       "System.Collections.Immutable/1.7.1": {
         "type": "package",
         "compile": {
@@ -299,6 +356,22 @@
         },
         "runtime": {
           "bin/placeholder/Domain.dll": {}
+        }
+      },
+      "Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "3.1.4",
+          "Microsoft.EntityFrameworkCore.Relational": "3.1.4",
+          "Pomelo.EntityFrameworkCore.MySql": "3.1.1"
+        },
+        "compile": {
+          "bin/placeholder/Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Repository.dll": {}
         }
       }
     }
@@ -464,6 +537,20 @@
         "lib/netstandard2.0/_._",
         "microsoft.entityframeworkcore.analyzers.3.1.4.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Relational/3.1.4": {
+      "sha512": "EBLO/szy1MYxcoWOOsqG+u2L2Akofd7o1W2jlKTekF+l2ZSqqCV0WSTh7Eb/7o1RFSJON+I0PQBRBVAJFgFtBA==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.relational/3.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll",
+        "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.xml",
+        "microsoft.entityframeworkcore.relational.3.1.4.nupkg.sha512",
+        "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/3.1.4": {
@@ -693,6 +780,89 @@
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
+    "MySqlConnector/0.61.0": {
+      "sha512": "E01yibVzCkVOmhNsUb+B4amjQKfKFlGiR1huNd6Q8aTCqBrACo0I3JMKvJBMpZfYhAsR8bqB9496PwcGpr+LuQ==",
+      "type": "package",
+      "path": "mysqlconnector/0.61.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/MySqlConnector.dll",
+        "lib/net45/MySqlConnector.xml",
+        "lib/net461/MySqlConnector.dll",
+        "lib/net461/MySqlConnector.xml",
+        "lib/net471/MySqlConnector.dll",
+        "lib/net471/MySqlConnector.xml",
+        "lib/netcoreapp2.1/MySqlConnector.dll",
+        "lib/netcoreapp2.1/MySqlConnector.xml",
+        "lib/netcoreapp3.0/MySqlConnector.dll",
+        "lib/netcoreapp3.0/MySqlConnector.xml",
+        "lib/netstandard1.3/MySqlConnector.dll",
+        "lib/netstandard1.3/MySqlConnector.xml",
+        "lib/netstandard2.0/MySqlConnector.dll",
+        "lib/netstandard2.0/MySqlConnector.xml",
+        "lib/netstandard2.1/MySqlConnector.dll",
+        "lib/netstandard2.1/MySqlConnector.xml",
+        "logo.png",
+        "mysqlconnector.0.61.0.nupkg.sha512",
+        "mysqlconnector.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/11.0.2": {
+      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+      "type": "package",
+      "path": "newtonsoft.json/11.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.11.0.2.nupkg.sha512",
+        "newtonsoft.json.nuspec"
+      ]
+    },
+    "Pomelo.EntityFrameworkCore.MySql/3.1.1": {
+      "sha512": "DYMsaJe/lKoaPGjB0ACnP+h5FeaJC+07f83FewBulkqfkUvc7m97PECX0OUHSTT+qEF0EOmJ7HQR0dltSCDyPQ==",
+      "type": "package",
+      "path": "pomelo.entityframeworkcore.mysql/3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Pomelo.EntityFrameworkCore.MySql.dll",
+        "pomelo.entityframeworkcore.mysql.3.1.1.nupkg.sha512",
+        "pomelo.entityframeworkcore.mysql.nuspec"
+      ]
+    },
+    "Pomelo.JsonObject/2.2.1": {
+      "sha512": "VHPk3Yf7nDt+tZMC1M4oAoc3bgTYsOrap3VTjn//vd91b/nfquAbAeq1k0Lf7mPt8J7imLd9Pbzm50uB5euuZA==",
+      "type": "package",
+      "path": "pomelo.jsonobject/2.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Pomelo.JsonObject.dll",
+        "pomelo.jsonobject.2.2.1.nupkg.sha512",
+        "pomelo.jsonobject.nuspec"
+      ]
+    },
     "System.Collections.Immutable/1.7.1": {
       "sha512": "B43Zsz5EfMwyEbnObwRxW5u85fzJma3lrDeGcSAV1qkhSRTNY5uXAByTn9h9ddNdhM+4/YoLc/CI43umjwIl9Q==",
       "type": "package",
@@ -918,11 +1088,17 @@
       "type": "project",
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "Repository/1.0.0": {
+      "type": "project",
+      "path": "../Repository/Repository.csproj",
+      "msbuildProject": "../Repository/Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Domain >= 1.0.0",
+      "Repository >= 1.0.0",
       "System.IdentityModel.Tokens.Jwt >= 6.6.0"
     ]
   },
@@ -954,6 +1130,9 @@
           "projectReferences": {
             "D:\\Projetos\\api_net_core_jwt_ef_core\\Domain\\Domain.csproj": {
               "projectPath": "D:\\Projetos\\api_net_core_jwt_ef_core\\Domain\\Domain.csproj"
+            },
+            "D:\\Projetos\\api_net_core_jwt_ef_core\\Repository\\Repository.csproj": {
+              "projectPath": "D:\\Projetos\\api_net_core_jwt_ef_core\\Repository\\Repository.csproj"
             }
           }
         }

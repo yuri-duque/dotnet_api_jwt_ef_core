@@ -12,7 +12,7 @@ API padrão para criação de projetos que necessitam de um login basico e tende
 Visual Studio 2019
 
 > Package Manager Console  
-  > update-database
+>> update-database
 
 > Iniciar projeto no VS 2019
 

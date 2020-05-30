@@ -1,9 +1,12 @@
 D:\Projetos\api_net_core_jwt_ef_core\Service\obj\Debug\netcoreapp3.1\Service.csprojAssemblyReference.cache
-D:\Projetos\api_net_core_jwt_ef_core\Service\obj\Debug\netcoreapp3.1\Service.csproj.CoreCompileInputs.cache
 D:\Projetos\api_net_core_jwt_ef_core\Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfoInputs.cache
 D:\Projetos\api_net_core_jwt_ef_core\Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfo.cs
 D:\Projetos\api_net_core_jwt_ef_core\Service\bin\Debug\netcoreapp3.1\Service.deps.json
 D:\Projetos\api_net_core_jwt_ef_core\Service\bin\Debug\netcoreapp3.1\Service.dll
 D:\Projetos\api_net_core_jwt_ef_core\Service\bin\Debug\netcoreapp3.1\Service.pdb
+D:\Projetos\api_net_core_jwt_ef_core\Service\obj\Debug\netcoreapp3.1\Service.csproj.CoreCompileInputs.cache
+D:\Projetos\api_net_core_jwt_ef_core\Service\obj\Debug\netcoreapp3.1\Service.csproj.CopyComplete
 D:\Projetos\api_net_core_jwt_ef_core\Service\obj\Debug\netcoreapp3.1\Service.dll
 D:\Projetos\api_net_core_jwt_ef_core\Service\obj\Debug\netcoreapp3.1\Service.pdb
+D:\Projetos\api_net_core_jwt_ef_core\Service\bin\Debug\netcoreapp3.1\Domain.dll
+D:\Projetos\api_net_core_jwt_ef_core\Service\bin\Debug\netcoreapp3.1\Domain.pdb

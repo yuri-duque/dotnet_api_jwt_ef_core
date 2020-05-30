@@ -1,5 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Domain.Models;
+﻿using Domain.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Repository.Context
 {

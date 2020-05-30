@@ -22,6 +22,8 @@ namespace Domain.Models
         {
             var map = modelBuilder.Entity<Usuario>();
             map.Property(x => x.Id).ValueGeneratedOnAdd();
+
+            map.HasIndex(x => x.Username).IsUnique();
         }
     }
 }

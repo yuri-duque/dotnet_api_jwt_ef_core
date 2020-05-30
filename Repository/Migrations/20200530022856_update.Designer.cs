@@ -8,8 +8,8 @@ using Repository.Context;
 namespace Repository.Migrations
 {
     [DbContext(typeof(BaseContext))]
-    [Migration("20200530021600_inicial")]
-    partial class inicial
+    [Migration("20200530022856_update")]
+    partial class update
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -33,9 +33,12 @@ namespace Repository.Migrations
 
                     b.Property<string>("Username")
                         .IsRequired()
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Username")
+                        .IsUnique();
 
                     b.ToTable("tb_usuario");
                 });

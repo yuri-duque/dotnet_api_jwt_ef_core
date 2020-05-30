@@ -70,6 +70,10 @@ namespace WebApi.Controllers
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState.Values.SelectMany(x => x.Errors));
 
+                bool disponivel = _usuarioService.VerificarDisponibilidadeUsername(user.Username);
+                if (!disponivel)
+                    return BadRequest("Username indisponivel");
+
                 _usuarioService.Save(user);
 
                 return Ok();

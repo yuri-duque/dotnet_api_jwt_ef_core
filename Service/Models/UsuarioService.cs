@@ -10,12 +10,10 @@ namespace Service.Models
     public class UsuarioService
     {
         private readonly UsuarioRepository _usuarioRepository;
-        private readonly IMapper _mapper;
 
-        public UsuarioService(UsuarioRepository usuarioRepository, IMapper mapper)
+        public UsuarioService(UsuarioRepository usuarioRepository)
         {
             _usuarioRepository = usuarioRepository;
-            _mapper = mapper;
         }
 
         public IList<Usuario> GetAll()
@@ -26,13 +24,6 @@ namespace Service.Models
         public Usuario GetById(long id)
         {
             return _usuarioRepository.Find(id);
-        }
-
-        public Usuario Login(UsuarioLoginDTO usuarioDTO)
-        {
-            var user = GetAll().FirstOrDefault(x => x.Username.ToLower().Equals(usuarioDTO.Username.ToLower()) && x.Password.Equals(usuarioDTO.Password));
-
-            return user;
         }
 
         public void Save(Usuario usuario)
@@ -48,6 +39,18 @@ namespace Service.Models
         public void Delete(long Id)
         {
             _usuarioRepository.Delete(x => x.Id == Id);
+        }
+
+        public Usuario Login(UsuarioLoginDTO usuarioDTO)
+        {
+            var user = GetAll().FirstOrDefault(x => x.Username.ToLower().Equals(usuarioDTO.Username.ToLower()) && x.Password.Equals(usuarioDTO.Password));
+
+            return user;
+        }
+
+        public bool VerificarDisponibilidadeUsername(string username)
+        {
+            return _usuarioRepository.VerificarExistencia(username);
         }
     }
 }

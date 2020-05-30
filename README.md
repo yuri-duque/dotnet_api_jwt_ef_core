@@ -35,10 +35,14 @@ AutoMapper DependencyInjection v7.0.0:
   > https://www.codementor.io/@zedotech/how-to-using-automapper-on-asp-net-core-3-0-via-dependencyinjection-zq497lzsq
 
 
+
+
 JWT v3.1.4:
   > utilizado para gerar tokens de acesso a api
   
   > https://balta.io/blog/aspnetcore-3-autenticacao-autorizacao-bearer-jwt
+  
+  
   
 
 Entity Framework Core v3.1.4:
@@ -47,14 +51,20 @@ Entity Framework Core v3.1.4:
   > http://www.macoratti.net/17/05/efcore_mysql1.htm
 
 
+
+
 Entity Framework Core MySql:
   > utilizado para possibilitar a integração do EF Core com o banco MySql
   
   > http://www.macoratti.net/17/05/efcore_mysql1.htm
   
+  
+  
 
 DependencyInjection:
   > Utilizado para facilitar a instancia de classes Repository, Service entre outras no sistema
+
+
 
 
 Postman:

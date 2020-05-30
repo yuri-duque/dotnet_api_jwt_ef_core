@@ -27,7 +27,7 @@ Backend (WebApi):
 	> Controller: Recebem as requisições do e chaman o Service via DependencyInjection.
   
 	
-# Ferramentas adicionais usadas
+# Ferramentas utilizadas
 
 AutoMapper DependencyInjection v7.0.0: 
   > utilizado para fazer a transformação de objetos que chegam da requisição para os objetos utilizados dentro do sistema.
